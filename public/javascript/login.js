@@ -1,4 +1,4 @@
-async function loginForm(event){
+async function loginFormHandler(event){
     event.preventDefault();
 
     const email = document.querySelector('#email-login').value.trim();
@@ -47,3 +47,9 @@ async function signupFormHandler(event) {
         }
     }
 }
+
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  
+
