@@ -11,7 +11,7 @@ router.get('/', withAuth, (req, res) => {
       },
       attributes: [
         'id',
-        'post_url',
+        'post_content',
         'title',
         'created_at'
       ],
@@ -30,15 +30,24 @@ router.get('/', withAuth, (req, res) => {
         }
       ]
     })
-      .then(dbPostData => {
+    .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('dashboard', { posts, loggedIn: true });
-      })
+    })
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
-      });
-  });
+    });
+});
+
+router.get('/addpost', (req, res) => {
+    // if (req.session.loggedIn) {
+    //     res.redirect('/');
+    //     return;
+    //   }
+    
+      res.render('add-post');
+});  
 
   router.get('/edit/:id', withAuth, (req, res) =>{
     Post.findOne({
@@ -47,7 +56,7 @@ router.get('/', withAuth, (req, res) => {
         },
         attributes: [
           'id',
-          'post_url',
+          'post_content',
           'title',
           'created_at'
         ],
