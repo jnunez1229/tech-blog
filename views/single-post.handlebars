@@ -1,23 +1,32 @@
-<article class="post">
+<article class="post mt-3">
   <div class="title">
-    <h2>{{post.title}}</h2>
+      <div class="card">
+        <div class="card-header">
+            {{format_date post.created_at}}
+        </div>
+        <div class="card-body">
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.post_content}}</p>
+  </div>
+</div>
+    <h2></h2>
     <p>
-        {{post.post_content}}
+        
     </p>
   </div>
   <div class="meta">
-    {{format_date post.created_at}}
+    
   </div>
 </article>
 
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea class="form-control" name="comment-body">Leave comment here...</textarea>
   </div>
 
   <div>
-    <button type="submit">add comment</button>
+    <button type="submit" class="btn btn-primary mb-3 mt-2">add comment</button>
   </div>
 </form>
 {{/if}}

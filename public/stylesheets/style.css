@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(167, 163, 163);
+}
+
+a{
+    text-decoration: none;
+    color: #0d6efd;
+}
+.btn a{
+    color: white;
+}
+

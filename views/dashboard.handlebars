@@ -1,20 +1,25 @@
 
 
-{{#if posts.length}}
+
 <section>
     <h2>Your Posts</h2>
+    <div>
+    <button class=" btn btn btn-primary mt-3"><a href="/dashboard/addpost">+ New Post</a></button>
+    </div>
+    {{#if posts.length}}
     <div>
         {{#each posts as |post|}}
         <div>
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+                <a href="/dashboard/edit/{{post.id}}" class="card-link">Edit post</a>
+            </div>
+                
         </div>
         {{/each}}
     </div>
+    {{/if}}
 </section>
-{{/if}}
 
-<div>
-    <button><a href="/dashboard/addpost">+ New Post</a></button>
-</div>
+
+
 
