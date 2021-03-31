@@ -41,12 +41,14 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/addpost', (req, res) => {
-    // if (req.session.loggedIn) {
-    //     res.redirect('/');
-    //     return;
-    //   }
+
     
       res.render('add-post');
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+ 
 });  
 
   router.get('/edit/:id', withAuth, (req, res) =>{
