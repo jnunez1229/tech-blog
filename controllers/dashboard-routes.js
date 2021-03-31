@@ -43,11 +43,12 @@ router.get('/', withAuth, (req, res) => {
 router.get('/addpost', (req, res) => {
 
     
-      res.render('add-post');
-    })
+      res.render('add-post')
+
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
+    })
  
 });  
 
