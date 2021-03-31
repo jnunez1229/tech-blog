@@ -12,7 +12,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: process.env.SECRET,
+  secret: 'aspen apollo',
   cookie: {maxAge:600000},
   resave: false,
   saveUninitialized: true,
