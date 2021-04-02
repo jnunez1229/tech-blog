@@ -43,13 +43,7 @@ router.get('/', withAuth, (req, res) => {
 router.get('/addpost', (req, res) => {
 
     
-      res.render('add-post')
-
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    })
- 
+      res.render('add-post');
 });  
 
   router.get('/edit/:id', withAuth, (req, res) =>{
