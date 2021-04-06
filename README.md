@@ -13,6 +13,7 @@
  *  Utilizes nodeJS, ExpressJS, Express-handlebars, Express-session, mysql2, sequelize, bcrypt, and connect-session-sequelize modules
 
  *  Link to Github Repository: (https://github.com/jnunez1229/tech-blog)
+ *  Link to Deployed Page: (https://protected-caverns-20085.herokuapp.com/)
   
 
 ## Application in Use
